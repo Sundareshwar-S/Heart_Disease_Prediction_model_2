@@ -1,0 +1,94 @@
+/* Background and font */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f0faff, #e8f6ff);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Main Card Container */
+.form-card {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #b3d9ff; /* light blue border */
+  box-shadow: 0 8px 24px rgba(0, 122, 204, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Card hover effect */
+.form-card:hover {
+  transform: scale(1.01);
+}
+
+/* Heading */
+.form-card h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 26px;
+  color: #2c3e50;
+}
+
+/* Subheading text */
+.form-subtext {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #5a5a5a;
+  font-size: 15px;
+}
+
+/* Form layout */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputs */
+.form-input {
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 1px solid #b3d9ff; /* light blue */
+  border-radius: 10px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* On focus */
+.form-input:focus {
+  border-color: #007acc;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 122, 204, 0.3);
+}
+
+/* Submit button */
+.submit-btn {
+  padding: 14px;
+  font-size: 17px;
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+/* Button hover */
+.submit-btn:hover {
+  background-color: #005fa3;
+  box-shadow: 0 4px 10px rgba(0, 122, 204, 0.3);
+}
+
+/* Error message box */
+.error-msg {
+  margin-top: 20px;
+  text-align: center;
+  color: #c0392b;
+  background-color: #fdecea;
+  border: 1px solid #f5c6cb;
+  padding: 10px;
+  border-radius: 8px;
+}

@@ -1,0 +1,17 @@
+<div class="form-card">
+  <h2>🩺 Heart Disease Prediction</h2>
+  <p class="form-subtext">🔐 Enter your MySQL credentials to begin prediction</p>
+
+  <form (ngSubmit)="submitForm()" #predictionForm="ngForm">
+    <div class="form-group">
+      <input [(ngModel)]="formData.user" name="user" placeholder="👤 MySQL Username" required class="form-input" />
+      <input [(ngModel)]="formData.password" name="password" placeholder="🔒 MySQL Password" required type="password" class="form-input" />
+      <input [(ngModel)]="formData.host" name="host" placeholder="🌐 Host (e.g., localhost)" required class="form-input" />
+      <input [(ngModel)]="formData.database_name" name="database_name" placeholder="🗃️ Database Name" required class="form-input" />
+      <input [(ngModel)]="formData.table_name" name="table_name" placeholder="📋 Table Name" required class="form-input" />
+    </div>
+    <button type="submit" class="submit-btn">🚀 Get Predictions</button>
+  </form>
+
+  <div *ngIf="errorMsg" class="error-msg">⚠️ {{ errorMsg }}</div>
+</div>
