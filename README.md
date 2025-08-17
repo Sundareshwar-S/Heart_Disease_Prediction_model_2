@@ -1,59 +1,30 @@
-# HeartDiseaseFrontend
+# Heart_Disease_Prediction_model_2
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
+A full-stack web application for predicting heart disease using machine learning. This project integrates an Angular frontend, Flask backend, MySQL database, and model training powered by FLAML's AutoML. It automatically selects and stores the best-performing model for deployment and further use.
 
-## Development server
+## 🚀 Features
 
-To start a local development server, run:
+- 🔍 Uses FLAML for automated ML model selection (KNN, SVC, XGBoost, Random Forest).
+- 🧠 Trains on MySQL-sourced data using a configurable `config.ini` setup.
+- 💾 Saves all trained models to a model registry using `joblib`.
+- 🌐 Modern Angular-based frontend for user interaction.
+- 🔧 Flask backend for API communication and model inference.
 
-```bash
-ng serve
-```
+## 🛠️ Tech Stack
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Frontend:** Angular
+- **Backend:** Flask
+- **Database:** MySQL
+- **ML Engine:** FLAML, Scikit-learn
+- **Storage:** joblib-based model registry
 
-## Code scaffolding
+## 🧪 Model Training
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+The training logic:
+- Connects to MySQL using `config.ini`
+- Loads and splits data
+- Tunes multiple models using FLAML
+- Saves the best model based on validation accuracy
 
-```bash
-ng generate component component-name
-```
+## 📁 File Structure
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
